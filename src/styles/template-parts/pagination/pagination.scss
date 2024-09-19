@@ -1,0 +1,59 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  @include tablet{
+    margin: get-vw(60 0 0 0, $viewport-tablet-small);
+  }
+  @include desktop{
+    margin: 60px 0 0 0;
+  }
+  .page-numbers{
+    color: $base-black;
+    transition: all .4s;
+    width: 3rem;
+    font-size: 1.4rem;
+    &:not(:last-child){
+      margin: 0 4px 0 0;
+    }
+    &:hover{
+      color: $base-black;
+      transition: all .4s;
+    }
+  }
+  .current{
+    color: $base-black;
+    font-weight: 700;
+  }
+  .prev, .next{
+    color: rgba($base-black, 0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: $base-black;
+    border-radius: 50%;
+
+    .arrow {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+    }
+    &:hover{
+      color: $base-black;
+      background: $base-blue;
+    }
+  }
+  .prev{
+    margin: 0 8px 0 0;
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+  .next{
+    margin: 0 0 0 8px;
+  }
+}

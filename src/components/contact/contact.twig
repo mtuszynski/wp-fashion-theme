@@ -1,0 +1,33 @@
+<section data-aos="flip-up" id="contact" class="contact">
+  <div class="contact__title">
+    {{ section.title }}
+  </div>
+  <div class="contact__container-fluid">
+    <div data-aos="fade-down" class="contact__row">
+      <div class="contact__subtitle">
+        {{ section.left_side_title }}
+      </div>
+      <div class="contact__socials">
+        {% for item in section.socials %}
+        <div class="contact__icon">
+          <a href="{{ item.link }}"
+            ><img src="{{ item.icon.url }}" alt="" class="contact__img"
+          /></a>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="contact__mail-container">
+        <a href="mailto:{{ section.mail }}" class="contact__mail">{{ section.mail }}</a>
+      </div>
+      
+    </div>
+    <div data-aos="fade-up" class="contact__row">
+        <div class="contact__subtitle">
+            {{ section.contact_form_title }}
+        </div>
+      <div class="contact__form">
+        {{ section.contact_form }}
+      </div>
+    </div>
+  </div>
+</section>

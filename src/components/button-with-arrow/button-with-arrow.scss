@@ -1,0 +1,22 @@
+.button-with-arrow {
+  padding:12rem 0;
+  &__container {
+    text-align: center;
+  }
+  &__btn {
+    margin:0 auto;
+    position: relative;
+    color: $btn-color;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      background-image: url("../../src/images/svg/section-arrow.svg");
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 2rem;
+      height: 1.6rem;
+      top: 0;
+      margin-left: 2rem;
+    }
+  }
+}

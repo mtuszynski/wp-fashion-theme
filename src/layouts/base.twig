@@ -1,0 +1,28 @@
+<!doctype html>
+<html {{ site.language_attributes }}>
+<head>
+  <meta charset="{{ site.charset }}"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
+  <meta httpequiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="theme-color" content="">
+
+  {{ fn( 'wp_head' ) }}
+</head>
+
+<body id="top" class="{{ body_class }} {{ post.slug }}">
+
+  {% include 'header/header.twig' %}
+
+  <main id="main">
+    {% block body %}
+
+    {% endblock %}
+  </main>
+
+  {% include 'footer/footer.twig' %}
+
+  {{ fn('wp_footer') }}
+
+
+</body>
+</html>

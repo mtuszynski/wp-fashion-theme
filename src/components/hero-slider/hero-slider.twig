@@ -1,0 +1,53 @@
+{% if site.language == 'pl_PL'%}
+  <section class="hero-slider">
+    <div class="hero-slider__start">
+      <div class="swiper-wrapper">
+        {% for item in options.slider %}
+          <div class="swiper-slide hero-slider__container">
+            <img src="{{ item.image.url }}" alt="" class="hero-slider__img" />
+            <div class="hero-slider__content-container">
+              <div class="hero-slider__content">
+                <div data-aos="fade-right" class="hero-slider__title">
+                  {{ item.title }}
+                </div>
+                <div data-aos="fade-left" class="hero-slider__text">{{ item.text }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <div class="scroll-text">
+  <span class="scroll-text__content">
+      {{ options.scroll_text }}
+  </span>
+  </div>
+{% else %}
+  <section class="hero-slider">
+    <div class="hero-slider__start">
+      <div class="swiper-wrapper">
+        {% for item in options.slider_en %}
+          <div class="swiper-slide hero-slider__container">
+            <img src="{{ item.image.url }}" alt="" class="hero-slider__img" />
+            <div class="hero-slider__content-container">
+              <div class="hero-slider__content">
+                <div data-aos="fade-right" class="hero-slider__title">
+                  {{ item.title }}
+                </div>
+                <div data-aos="fade-left" class="hero-slider__text">{{ item.text }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <div class="scroll-text">
+  <span class="scroll-text__content">
+      {{ options.scroll_text_en }}
+  </span>
+  </div>
+{% endif %}

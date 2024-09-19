@@ -1,0 +1,39 @@
+.gallery-three-horizontal-image {
+padding:1.5rem 0;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint-down(sm){
+      flex-direction: column;
+    }
+  }
+  &__image {
+    flex:0 0 32%;
+  }
+  &__img {
+    max-width:100%;
+    height:auto;
+  }
+  //&__img {
+  //  max-width: 41.6rem;
+  //  aspect-ratio: .79;
+  //  object-fit: fill;
+  //  @include breakpoint-down(lxg){
+  //    max-width: 36rem;
+  //  }
+  //  @include breakpoint-down(lg){
+  //    max-width: 32rem;
+  //  }
+  //  @include breakpoint-down(xmd){
+  //    max-width: 30rem;
+  //  }
+  //  @include breakpoint-down(md){
+  //    max-width: 24rem;
+  //  }
+  //  @include breakpoint-down(sm){
+  //    max-width: 100%;
+  //    padding-bottom: 1rem;
+  //    align-self: center!important;
+  //  }
+  //}
+}

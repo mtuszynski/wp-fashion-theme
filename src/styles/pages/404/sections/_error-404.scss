@@ -1,0 +1,12 @@
+.error-404{
+  min-height: 100vh;
+  &__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image{}
+  &__content{}
+}

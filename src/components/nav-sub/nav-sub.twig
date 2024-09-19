@@ -1,0 +1,19 @@
+<ul class="nav-sub js-init-display-none {{ class }}">
+
+  {% if backbtn %}
+  <li class="nav-sub__back js-nav-sub__back">{{'chevron-down' | icon('icon') }} {{ __('wróć', 'text-domain') }} </li>
+  {% set backbtn = false %}
+  {% endif %}
+
+  {% for item in item.children %}
+    <li class="nav-sub__item">
+      <a {% if item.link %} href="{{ item.link }}" {% endif %} class="nav-sub__link {{item.classes | join(' ')}}">
+        {{ item.title }}
+      </a>
+      {% if item.children %}
+        {% include "nav-sub/nav-sub.twig" with {'items': item.children, 'class': '', 'backbtn': false} %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+

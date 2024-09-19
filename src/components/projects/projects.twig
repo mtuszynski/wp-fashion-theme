@@ -1,0 +1,39 @@
+<section data-aos="fade-left" id="projects" class="projects">
+  <div class="projects__title">
+    {{ section.title }}
+  </div>
+  <div class="swiper projects__slider">
+    <div class="swiper-wrapper">
+      {% for item in section.slider %}
+      <div class="swiper-slide projects__item">
+        <div class="swiper-button-prev"></div>
+        <div data-aos="fade-right" class="projects__img-container">
+          <img src=" {{ item.image.url }}" alt="" class="projects__img" />
+        </div>
+          <div data-aos="fade-left" class="projects__content">
+          <div data-aos="fade-down" class="projects__name">
+            {{ item.title }}
+          </div>
+          <div data-aos="fade-left" class="projects__subtitle">
+            {{ item.subtitle }}
+          </div>
+          <div data-aos="fade-right" class="projects__text">
+            {{ item.text }}
+          </div>
+          <div data-aos="fade-left" class="projects__menu">
+            {% for link in item.menu %}
+            <a href="{{ link.link.url }}">{{ link.link.title }}</a>
+            {% endfor %}
+          </div>
+          <div data-aos="fade-left" class="projects__link">
+            <a href="{{item.link.url }}" class="projects__btn">{{ item.link.title }}</a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

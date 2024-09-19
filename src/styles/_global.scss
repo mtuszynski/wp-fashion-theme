@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: $font-clash;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $base-white;
+  overflow-x: hidden;
+  background: $background-color;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $base-black;
+  transition: 300ms all ease-in;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width:106.5rem;
+  margin: 0 auto;
+  padding-inline:2rem;
+}
+
+.container-fluid {
+  max-width:130.6rem;
+  margin: 0 auto;
+  padding-inline:2rem;
+}
+
+main {
+  margin-top: 0;
+}
+
+strong, b {
+  font-weight: 600;
+}
+section.single-page {
+  min-height: 100vh;
+  padding-top: 10rem;
+  color:$base-white;
+}

@@ -1,0 +1,15 @@
+.btn {
+  &--gray {
+    background: $base-gray-2;
+    border-radius: .8rem;
+    padding: 1.5rem 3.4rem;
+    text-align: center;
+  }
+
+  &--primary {
+    background: $base-blue;
+    border-radius: 1rem;
+    padding: 1.5rem 3.4rem;
+    text-align: center;
+  }
+}

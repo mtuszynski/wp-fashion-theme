@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SVGDoc" width="15" height="24" xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 15 24">
+  <defs></defs>
+  <g>
+    <g>
+      <image
+          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYCAYAAAAlBadpAAABEElEQVQ4T+2SIUtEQRSFv1M0L4ILgsFfoEmDYQ1qNJmsIiaj/gHrNotJBMW2a1ZBwSJoMJiMBtEi2gTLkbvOk8fzDbwq7MSZ+51759wjMsf2OHAKrEp6qStT3aXtEeASmAfugI6kz2ptDj4EJoAl4AZ4AtYkuSzwB7a9A6wDc8A7MAWcAceSdrOw7RXgIMaV9Gg7OrWAdppgQ1KvEPjtbHsauE4GXURBAUv6sL0I9NP/7+N9ANsO5VugK2mvUC7DqW4L2AZmJb3K9ihwBTxI2iz/qQongX1gBlgI+AiYBJYlfTWAY43nwHPAMcqJpLfqHus6p+5jg9XlElY1rHHCcoY1StgQphXxHLr948A/jec3sq+yKpFzM84AAAAASUVORK5CYII="
+          width="15" height="24" transform="matrix(1,0,0,1,0,0)"></image>
+    </g>
+  </g>
+</svg>

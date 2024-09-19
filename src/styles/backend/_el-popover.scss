@@ -1,0 +1,9 @@
+.el-popover{
+  background-color: #fff;
+  .el-popconfirm{
+    padding: 16px;
+    &__main{
+      margin-top: unset;
+    }
+  }
+}

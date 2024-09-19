@@ -1,0 +1,52 @@
+$margin: 15px;
+
+.blog-header{
+  width: 100%;
+  margin: 5rem 0 2rem;
+
+  &__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include tablet-small {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  &__categories{
+    width: calc(100% - 32px);
+    @include tablet{
+      width: calc(70% - #{get-vw($margin, $viewport-tablet)});
+    }
+    @include desktop{
+      width: calc(70% - #{$margin});
+    }
+
+    h1 {
+      @extend .h1-extra;
+      text-align: center;
+      text-transform: uppercase;
+      @include tablet-small {
+        text-align: left;
+        text-transform: unset;
+      }
+    }
+  }
+  &__search{
+    width: 100%;
+    margin-top: 3rem;
+    background: transparent;
+    @include tablet-small {
+      width: 40%;
+      margin-top: 0;
+    }
+    @include tablet {
+      width: calc(30% - #{get-vw($margin, $viewport-tablet)});
+    }
+    @include desktop{
+      width: calc(28% - #{$margin});
+    }
+  }
+}

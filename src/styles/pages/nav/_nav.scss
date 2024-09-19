@@ -1,0 +1,139 @@
+.nav-main {
+  display: flex;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.2rem;
+  color: $base-white;
+  align-items: stretch;
+
+  @include breakpoint-down("md") {
+    flex-flow: column;
+  }
+  &--lang {
+    padding-left:5rem;
+    @include breakpoint-down(md){
+      flex-flow: inherit;
+      padding-left: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $base-white;
+    margin-right: 2.9rem;
+    font-size: 1.8rem;
+    padding: 2rem 0;
+
+    @include breakpoint-down("lg") {
+      margin-right: 1.4rem;
+      font-size: 1.4rem;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+    &--lang {
+      margin-right: .5rem;
+      &:first-child{
+        &:after {
+          content:"/";
+          padding-left: .5rem;
+        }
+      }
+    }
+
+    &--has-children {
+      position: relative;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: $font-400;
+    color: $base-white;
+
+    &[href]:hover, &.current-menu-item {
+      color: $btn-color;
+    }
+
+    &.menu-tel, &.menu-mail {
+      background-color: #0079ce;
+      padding: 1.6rem 2rem;
+      border-radius: 3rem;
+      text-indent: -999rem;
+
+      &:before {
+        content: '';
+        background-image: url("../images/svg/phone.svg");
+        width: 1.7rem;
+        height: 2.4rem;
+      }
+
+    }
+
+    &.menu-tel {
+      span {
+        display: none;
+      }
+    }
+
+    &.menu-mail {
+      border-radius: 8px;
+      background-color: #525252;
+      color: $base-white;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      text-indent: 0;
+
+      &:before {
+        background-image: url("../images/svg/message.svg");
+        width: 2.7rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+
+  .chevron-down {
+
+    width: 24px;
+    height: 14px;
+    background-size: 1.4rem;
+  }
+
+  .arrow-bottom {
+    margin-left: 4px;
+    width: 1.2rem;
+    height: .8rem;
+
+    background-size: cover;
+    display: none;
+    transition: all 300ms ease-out;
+
+    @include breakpoint-down(md) {
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: 0 38%;
+    }
+
+    &:not(.desktop) {
+      display: block;
+    }
+
+    &.active {
+      transform: rotate(180deg);
+      transition: all 300ms ease-out;
+    }
+
+    @include breakpoint-down("md") {
+      margin-left: .8rem;
+      width: 2rem;
+      height: 1.8rem;
+      display: block;
+    }
+  }
+
+}

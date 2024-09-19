@@ -1,0 +1,22 @@
+<ul class="nav-main {{class}}">
+    {% set items = menu.items %}
+  
+    {% for item in items %}
+  
+      <li class="nav-main__item nav-main__item--lang {% if item.slug == post.post_name %} current {% endif %} " tabindex="0">
+  
+        {% if item.link %}
+          <a href="{{ item.link }}" class="nav-main__link {{item.classes | join(' ')}} {% if item.children %} js-nav-main__link {% endif %}">
+        {% else %}
+          <a class="nav-main__link {{item.classes | join(' ')}} {% if item.children %} js-nav-main__link {% endif %}">
+        {% endif %}
+  
+          <span>
+            {{item.title}}
+          </span>
+        </a>
+      </li>
+  
+    {% endfor %}
+  </ul>
+  

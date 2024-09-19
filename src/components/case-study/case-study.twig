@@ -1,0 +1,27 @@
+<section data-aos="fade-right" class="case-study">
+    <div class="container-fluid">
+        <div data-aos="fade-right" class="case-study__item">
+            <img src=" {{ section.image.url }}" alt="" class="case-study__img" />
+            <div data-aos="fade-left" class="case-study__content">
+                <div data-aos="fade-down" class="case-study__name">
+                    {{ section.title }}
+                </div>
+                <div data-aos="fade-left" class="case-study__subtitle">
+                    {{ section.subtitle }}
+                </div>
+                <div data-aos="fade-right" class="case-study__text">
+                    {{ section.text }}
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div data-aos="fade-left" class="case-study__details">
+            {% for item in section.details %}
+                <div class="case-study__detail">
+                    {{ item.detail }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</section>

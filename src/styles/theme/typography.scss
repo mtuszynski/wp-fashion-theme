@@ -1,0 +1,120 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-clash;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.7rem;
+    color: $base-white;
+    background-color: $white;
+}
+h1, h2, h3, h4 {
+    color:$base-white!important;
+}
+h1,
+.h1 {
+    font-family: $font-clash;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+    letter-spacing: -0.5px;
+    color: $base-white;
+    margin-bottom: 2rem;
+
+    @include breakpoint-up(md) {
+        font-size: 4.8rem;
+        line-height: 5.8rem;
+        letter-spacing: -0.6px;
+        margin-bottom: 2.4rem;
+    }
+}
+
+h2,
+.h2 {
+    font-family: $font-clash;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+    letter-spacing: -0.6px;
+    color: $base-white;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint-up(md) {
+        font-size: 4.4rem;
+        line-height: 5.8rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 2.4rem;
+    }
+}
+
+h3,
+.h3 {
+    font-family: $font-clash;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+    letter-spacing: 0.2px;
+    color: $base-white;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint-up(md) {
+        margin-bottom: 2.4rem;
+        font-size: 3rem;
+    }
+}
+
+h4,
+.h4 {
+    font-family:$font-clash;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+    letter-spacing: 0.2px;
+    color: $base-white;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint-up(md) {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        letter-spacing: normal;
+    }
+}
+
+h5,
+.h5 {
+    font-family: $font-clash;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+    color: $base-white;
+    margin-bottom: 1.6rem;
+}
+
+h6,
+.h6 {
+    font-family: $font-clash;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    letter-spacing: normal;
+    color: $base-white;
+    margin-bottom: 1.6rem;
+}
+
+p,
+.p {
+    font-family: $font-clash;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3.6rem;
+    color: $violet-dark;
+}
+
+b,
+strong {
+    font-weight: 500;
+}

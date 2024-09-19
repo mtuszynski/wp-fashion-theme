@@ -1,0 +1,96 @@
+$margin: $base-margin;
+$height: 44px;
+
+.search {
+  &__head {
+    font-size: 1.6rem;
+    color: $base-gray-2;
+    text-align: center;
+
+    @include tablet-small {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+
+  &-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet-small {
+      justify-content: flex-end;
+    }
+    &__search{
+      height: $height;
+      align-items: center;
+      .icon{
+        &:before{
+          opacity: 1;
+          transition: all .4s;
+        }
+        &.hidden{
+          &:before{
+            opacity: 0;
+            transition: all .4s;
+          }
+        }
+      }
+    }
+    &__container{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+      transition: all .4s;
+      position: relative;
+      left: unset;
+
+      @include tablet-small{
+        width: calc(100% - (2 * #{$margin}));
+      }
+    }
+    &__form{
+      width: 100%;
+      &__container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:before{
+          right: 24px;
+          font-size: 1.7rem;
+          position: absolute;
+          z-index: 1;
+          color: rgba(25, 25, 25, 0.3);
+        }
+      }
+      .search-field{
+        width: 100%;
+        height: $height;
+        border: 2px solid rgba(25, 25, 25, 0.2);
+        color: rgba(25, 25, 25, 0.3);
+        padding: 8px 16px;
+        &::placeholder{
+          color: rgba(25, 25, 25, 0.3);
+        }
+      }
+      .search-btn{
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 24px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        z-index: 2;
+        background-color: transparent;
+        border: unset;
+      }
+    }
+    &__close{
+      margin: 0 0 0 16px;
+    }
+  }
+}

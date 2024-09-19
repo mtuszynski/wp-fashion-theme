@@ -1,0 +1,29 @@
+{% if posts.pagination.pages %}
+    <div class="pagination">
+        <div class="pagination__container">
+            <a href="{{ posts.pagination.prev.link }}"
+               class="prev {{ posts.pagination.prev.link|length ? '' : 'invisible' }}">
+                {{ __('Poprzednia') }}
+            </a>
+            <ul class="pagination__list">
+                {% for page in posts.pagination.pages %}
+                    <li>
+                        {% if page.link %}
+                            <a href="{{ page.link }}" class="{{ page.class }}">
+                                {{ page.title }}
+                            </a>
+                        {% else %}
+                            <span class="{{ page.class }}">
+                            {{ page.title }}
+                        </span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ posts.pagination.next.link }}"
+               class="next {{ posts.pagination.next.link|length ? '' : 'invisible' }}">
+                {{ __('Następna') }}
+            </a>
+        </div>
+    </div>
+{% endif %}

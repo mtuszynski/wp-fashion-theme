@@ -1,0 +1,49 @@
+/* Convert px to vw */
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function convert-to-vw($value, $viewport) {
+  $value: strip-unit($value) / $viewport * 100vw;
+  @if ($value == 0vw) {
+    $value: 0;
+  }
+  @return $value;
+}
+@function get-vw($values, $viewport) {
+  $max: length($values);
+  @if $max == 1 {
+    @return convert-to-vw(nth($values, 1), $viewport);
+  }
+  $vwValues: ();
+  @for $i from 1 through $max {
+    $vwValues: append(
+        $vwValues,
+        convert-to-vw(nth($values, $i), $viewport)
+    );
+  }
+  @return $vwValues;
+}
+/* End */
+
+
+@mixin spaces-classes($spaces) {
+  @each $index, $space in $spaces {
+    .m#{$index}  {margin: $space;}
+    .ml#{$index} {margin-left: $space;}
+    .mr#{$index} {margin-right: $space;}
+    .mt#{$index} {margin-top: $space;}
+    .mb#{$index} {margin-bottom: $space;}
+    .mx#{$index} {margin-left: $space; margin-right: $space;}
+    .my#{$index} {margin-top: $space; margin-bottom: $space;}
+
+    .p#{$index} {padding: $space;}
+    .pl#{$index} {padding-left: $space;}
+    .pr#{$index} {padding-right: $space;}
+    .pt#{$index} {padding-top: $space;}
+    .pb#{$index} {padding-bottom: $space;}
+    .px#{$index} {padding-left: $space; padding-right: $space;}
+    .py#{$index} {padding-top: $space; padding-bottom: $space;}
+  }
+}
+
+@include spaces-classes($spaces);

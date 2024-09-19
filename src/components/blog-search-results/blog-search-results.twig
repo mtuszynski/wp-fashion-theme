@@ -1,0 +1,69 @@
+<section class="blog-categories mt8">
+    <div class="blog-categories__container">
+        <div class="blog-categories__row">
+
+            <h3 class="blog-search-results__title ml5">
+                {{ __('Wyniki wyszukiwania:') }} {{ function('get_search_query') }}
+            </h3>
+
+        </div>
+        <div class="blog-categories__row">
+            {% for post in posts %}
+                <div class="blog-categories__col">
+                    <div class="blog-categories__image">
+                        <a href="{{ post.link }}">
+                            <picture>
+                                <img src="{{ post.thumbnail.src|resize(438, 279) }}" alt="Image for {{ post.title }}"/>
+                            </picture>
+                        </a>
+                        <div class="blog-categories__tags">
+                            {{ function('the_category', '','blog') }}
+                        </div>
+                    </div>
+                    <div class="blog-categories__content">
+                        <a href="{{ post.link }}">
+                            <h6 class="display-6 blog-categories__title">
+                                {{ post.title }}
+                            </h6>
+                        </a>
+                        <p class="blog-categories__text">
+                            {{ post.preview.length(30) }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if posts.found_posts==0 %}
+                <div class="blog-categories__row pl5">
+                    <h4 class="display-5">
+                        {{ __('Nie znaleźliśmy wpisów dla wyszukiwanego hasła.') }}
+                    </h4>
+                </div>
+                {% for post in similar_posts %}
+                    <div class="blog-search-results__col">
+
+                        <div class="blog-search-results__image">
+                            <a href="{{ post.link }}">
+                                <img src="{{ post.thumbnail.src|resize(438, 279) }}" alt="Image for {{ post.title }}"/>
+                            </a>
+                            <div class="blog-search-results__tags">
+                                {{ function('the_category', '') }}
+                            </div>
+                        </div>
+                        <div class="blog-search-results__content">
+                            <a href="{{ post.link }}">
+                                <h6 class="blog-search-results__title">
+                                    {{ post.title }}
+                                </h6>
+                            </a>
+                            <p class="blog-search-results__text">
+                                {{ post.preview.length(30) }}
+                            </p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+</section>

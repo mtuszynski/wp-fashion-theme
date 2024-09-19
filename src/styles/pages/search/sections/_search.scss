@@ -1,0 +1,42 @@
+.search{
+  width: 100%;
+  &__container{
+
+  }
+  &__search-form{
+    margin: 30px 0;
+    @include tablet{
+      margin: get-vw(60 0, $viewport-tablet);
+    }
+    @include desktop{
+      margin: 60px 0;
+    }
+  }
+  &__head{
+    margin: 30px 0;
+    @include tablet{
+      margin: get-vw(60 0, $viewport-tablet);
+    }
+    @include desktop{
+      margin: 60px 0;
+    }
+    .head{
+      margin: 16px 0;
+      @include tablet{
+        margin: get-vw(30 0, $viewport-tablet);
+      }
+      @include desktop{
+        margin: 30px 0;
+      }
+    }
+  }
+  &__content{
+    margin: 30px 0;
+    @include tablet{
+      margin: get-vw(60 0, $viewport-tablet);
+    }
+    @include desktop{
+      margin: 60px 0;
+    }
+  }
+}

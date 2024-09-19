@@ -1,0 +1,23 @@
+<ul class="{{ class }}">
+    {% set items = menu.items %}
+
+    {% for item in items %}
+
+        <li class="footer-nav__item {% if item.slug == post.post_name %} current {% endif %} " tabindex="0">
+
+            {% if item.link %}
+            <a href="{{ item.link }}" class="footer-nav__link {{ item.classes | join(' ') }}">
+                {% else %}
+                <a class="footer-nav__link {{ item.classes | join(' ') }}">
+                    {% endif %}
+
+                    <span>
+          {{ item.title }}
+                </span>
+
+                </a>
+        </li>
+
+    {% endfor %}
+
+</ul>

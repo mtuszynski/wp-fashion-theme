@@ -1,0 +1,21 @@
+.cookie{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $base-gray;
+  border-top: 1px solid $base-black;
+  &__container{
+    width: 100%;
+    padding: 16px 0;
+    @include tablet{
+      padding: get-vw(32 0, $viewport-tablet);
+    }
+    @include desktop{
+      padding: 32px 0;
+    }
+  }
+  @import 'cookie-bar';
+
+  @import 'cookie-dialog';
+}

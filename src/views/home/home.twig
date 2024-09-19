@@ -1,0 +1,10 @@
+{% extends 'base.twig' %}
+
+
+{% block body %}
+
+  {% for section in post.meta('homepage') %}
+    {% include section.acf_fc_layout ~ '/' ~ section.acf_fc_layout ~ '.twig' %}
+  {% endfor %}
+
+{% endblock %}

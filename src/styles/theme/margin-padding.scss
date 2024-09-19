@@ -1,0 +1,55 @@
+@mixin spaces-classes($spaces) {
+    @each $index, $space in $spaces {
+        .m#{$index}  {margin: $space;}
+        .ml#{$index} {margin-left: $space;}
+        .mr#{$index} {margin-right: $space;}
+        .mt#{$index} {margin-top: $space;}
+        .mb#{$index} {margin-bottom: $space;}
+        .mx#{$index} {margin-left: $space; margin-right: $space;}
+        .my#{$index} {margin-top: $space; margin-bottom: $space;}
+        
+        .p#{$index} {padding: $space;}
+        .pl#{$index} {padding-left: $space;}
+        .pr#{$index} {padding-right: $space;}
+        .pt#{$index} {padding-top: $space;}
+        .pb#{$index} {padding-bottom: $space;}
+        .px#{$index} {padding-left: $space; padding-right: $space;}
+        .py#{$index} {padding-top: $space; padding-bottom: $space;}
+
+        // negative margins
+        $space: -$space;
+        .nm#{$index}  {margin: $space;}
+        .nml#{$index} {margin-left: $space;}
+        .nmr#{$index} {margin-right: $space;}
+        .nmt#{$index} {margin-top: $space;}
+        .nmb#{$index} {margin-bottom: $space;}
+        .nmx#{$index} {margin-left: $space; margin-right: $space;}
+        .nmy#{$index} {margin-top: $space; margin-bottom: $space;}
+    }
+  }
+
+@include spaces-classes($spaces);
+
+@mixin m($index)   {margin: map-get($spaces, $index )}
+@mixin ml($index)  {margin-left: map-get($spaces, $index )}
+@mixin mr($index)  {margin-right: map-get($spaces, $index )}
+@mixin mt($index)  {margin-top: map-get($spaces, $index )}
+@mixin mb($index)  {margin-bottom: map-get($spaces, $index )}
+@mixin mx($index)  {margin-left: map-get($spaces, $index ); margin-right: map-get($spaces, $index )}
+@mixin my($index)  {margin-top: map-get($spaces, $index ); margin-bottom: map-get($spaces, $index )}
+
+@mixin p($index)   {padding: map-get($spaces, $index )}
+@mixin pl($index)  {padding-left: map-get($spaces, $index )}
+@mixin pr($index)  {padding-right: map-get($spaces, $index )}
+@mixin pt($index)  {padding-top: map-get($spaces, $index )}
+@mixin pb($index)  {padding-bottom: map-get($spaces, $index )}
+@mixin px($index)  {padding-left: map-get($spaces, $index ); padding-right: map-get($spaces, $index )}
+@mixin py($index)  {padding-top: map-get($spaces, $index ); padding-bottom: map-get($spaces, $index )}
+
+@mixin nm($index)  {margin: - map-get($spaces, $index )}
+@mixin nml($index) {margin-left: - map-get($spaces, $index )}
+@mixin nmr($index) {margin-right: - map-get($spaces, $index )}
+@mixin nmt($index) {margin-top: - map-get($spaces, $index )}
+@mixin nmb($index) {margin-bottom: - map-get($spaces, $index )}
+@mixin nmx($index) {margin-left: - map-get($spaces, $index ); margin-right: - map-get($spaces, $index )}
+@mixin nmy($index) {margin-top: - map-get($spaces, $index ); margin-bottom: - map-get($spaces, $index )}

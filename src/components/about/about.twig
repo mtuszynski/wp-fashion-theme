@@ -1,0 +1,25 @@
+<section data-aos="fade-right" id="about" class="about">
+    <div class="about__container">
+        <div class="about__row about__textarea">
+            <div class="about__title">
+                {{ section.title }}
+            </div>
+            <div data-aos="fade-up" class="about__text">
+                {{ section.text }}
+            </div>
+            <div data-aos="fade-up" class="about__link">
+                <a href="{{ section.link.url }}" class="about__btn">{{ section.link.title }}</a>
+            </div>
+        </div>
+        <div data-aos="fade-up" class="about__row about__video">
+            {% if section.image.url %}
+            <img src="{{ section.image.url }}" alt="" class="about__img">
+                {% else %}
+                    <video controls autoplay muted>
+                        <source src="{{ section.video.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+            {% endif %}
+        </div>
+    </div>
+</section>

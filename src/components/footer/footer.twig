@@ -1,0 +1,18 @@
+<footer class="footer">
+    <div class="container-fluid">
+<div class="footer__content">
+            <div class="footer__address">
+                <div class="footer__address-line">{{ options.name }}</div>
+                <div class="footer__address-line"> {{ options.adres }}</div>
+                 <a href="tel:{{ options.phone }}">{{ options.phone }}</a>
+            </div>
+            <div class="footer__menu">
+                {% include 'footer-nav/footer-nav.twig' with {'class': 'footer-nav', 'menu': nav_footer} %}
+            </div>
+        </div>
+        <div class="footer__copyright">
+
+        </div>
+    </div>
+</footer>
+

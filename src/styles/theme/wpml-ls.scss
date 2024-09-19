@@ -1,0 +1,137 @@
+.wpml-ls-statics-shortcode_actions.wpml-ls {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+
+    @include breakpoint-down(md) {
+        height: auto;
+    }
+
+    ul {
+        margin-top: 5px !important;
+        display: flex;
+        flex-direction: column;
+        padding: 9px 0 8px 0;
+        background-color: $dark-black;
+        border-radius: 20px;
+        min-height: 40px;
+
+        transition: 0.2s ease-in-out;
+        @include breakpoint-down(md) {
+            flex-direction: row;
+            background-color: transparent;
+            border-radius: 0;
+            margin-top: 0 !important;
+            margin-left: -6px !important;
+            margin-right: -6px !important;
+            padding: 0;
+            // justify-content: center;
+        }
+
+        li {
+            order: 2;
+            height: 22px;
+            overflow: hidden;
+            display: flex;
+            transition: 0.4s ease-in-out;
+
+            @include breakpoint-down(md) {
+                height: 40px;
+                max-height: 40px;
+                margin: 0 6px;
+            }
+
+            &:not(.wpml-ls-current-language) {
+                @include breakpoint-up(md) {
+                    max-height: 0;
+                }
+                &:hover {
+                    color: $lima-ui;
+                }
+            }
+
+            &.wpml-ls-current-language {
+                order: 1;
+                height: 22px;
+                max-height: 22px;
+
+                @include breakpoint-down(md) {
+                    order: 2;
+                    max-height: 40px;
+                    height: 40px;
+                }
+                a {
+                    pointer-events: none;
+
+                    @include breakpoint-down(md) {
+                        background-color: $dark-black;
+                        color: $white;
+                    }
+                    &::after {
+                        @include pseudo;
+                        width: 24px;
+                        height: 22px;
+                        background-image: url(images/svg/chevron-up-gray.svg);
+                        background-position: center;
+                        background-size: cover;
+                        position: relative;
+                        transform: rotate(-180deg);
+                        transition: 0.4s ease-in-out;
+                        // transition: 0s;
+                        cursor: pointer;
+                        @include breakpoint-down(md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            a,
+            span {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                line-height: 2.2rem;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+            }
+            a {
+                display: inline-flex;
+                padding: 0 16px;
+                @include breakpoint-down(md) {
+                    width: 40px;
+                    height: 40px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    border-radius: 20px;
+                    color: $new-grey;
+                }
+            }
+        }
+        @include breakpoint-up(md) {
+            &:hover {
+                li {
+                    max-height: 22px !important;
+                    &:not(.wpml-ls-current-language) {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover ul li.wpml-ls-current-language a::after {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,79 @@
+.what-we-do {
+  background-color: $base-black;
+  padding-top: 8rem;
+  padding-bottom: 7.3rem;
+  overflow: hidden;
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    color: $font-color;
+    font-weight: 400;
+    font-size: 5.9rem;
+    line-height: 7.2rem;
+    text-align: center;
+    padding-bottom: 2.8rem;
+    @include breakpoint-down(sm){
+      font-size: 4.4rem;
+      line-height: 6rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    width: 35%;
+    text-align: left;
+    margin: 0 auto;
+    padding-bottom: 7.7rem;
+    @include breakpoint-down(md){
+      width: 80%;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__icon {
+    width: 20%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    @include breakpoint-down(md){
+      width:33%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include breakpoint-down(sm){
+      width:50%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__icon-img {
+    padding-bottom: 2.9rem;
+    align-self: center!important;
+    @include breakpoint-down(md){
+      align-self: center;
+    }
+    @include breakpoint-down(sm){
+      align-self: center;
+    }
+  }
+  &__icon-text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: $font-color;
+    text-align: center;
+    padding-bottom: 6.8rem;
+    @include breakpoint-down(md){
+      text-align: center;
+    }
+  }
+}

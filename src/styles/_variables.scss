@@ -1,0 +1,86 @@
+$breakpoints: (
+    xxxs: 0,
+    xxs: 425px,
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    xmd: 1100px,
+    lg: 1200px,
+    lxg: 1300px,
+    xl: 1440px,
+    xxl: 1560px,
+    fhd: 1920px,
+);
+
+$container-sizes: (
+    xxxs: 95%,
+    xxs: 95%,
+    xs: 95%,
+    sm: 95%,
+    md: 95%,
+    xmd: 95%,
+    lg: 95%,
+    lxg: 95%,
+    xl: 95%,
+    xxl: 95%,
+    fhd: 95%,
+);
+
+//margin-padding
+$spaces: (
+    1: 0.4rem,
+    2: 0.8rem,
+    3: 1.6rem,
+    4: 2.4rem,
+    5: 3.2rem,
+    6: 4.8rem,
+    7: 6.4rem,
+    8: 8rem,
+    9: 10rem,
+    10: 12rem,
+    11: 16rem,
+    12: 20rem,
+    13: 24rem
+);
+
+/* fonts */
+$font-clash: 'Clash Grotesk', sans-serif;
+$font-open: 'Open Sans', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+
+$font-300: 300;
+$font-400: 400;
+$font-500: 500;
+$font-600: 600;
+
+/* colors */
+
+$background-color: #8CB7B0;
+$font-color: #CFEFEC;
+$btn-color: #CFEFEC;
+$second-color: #3F3F3F;
+$base-black: #000000;
+$base-gray: #dddddd;
+$base-white: #ffffff;
+
+
+$base-blue: #0079ce;
+$base-blue-dark: #00784E;
+$base-blue-2: #313E75;
+$base-black-2: #191919;
+$base-gray-2: #909090;
+$base-gray-3: #D8D8D8;
+$base-gray-4: #3d3d38;
+
+
+/* viewports */
+$viewport-desktop: 1920;
+$viewport-tablet: 1280;
+$viewport-tablet-small: 1024;
+$viewport-mobile: 768;
+$viewport-phone: 360;
+
+
+
+/* margins */
+$base-margin: 15px;

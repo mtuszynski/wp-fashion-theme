@@ -1,0 +1,6 @@
+{% extends 'base-blog.twig' %}
+
+{% block main %}
+    {% include 'blog-posts-tag/blog-posts-tag.twig' with {items: term.posts(queried_object.id, 'post')} %}
+    {% include 'blog-pagination/blog-pagination.twig' %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+	<section class="hero-blog">
+		<div class="container">
+			<h1>{{ __('Serdecznie witamy na naszym <b>BLOGU!</b>') }}</h1>
+			{% include 'breadscrumbs/breadscrumbs.twig' %}
+		</div>
+	</section>
+	<section class="blog-desc">
+		<div class="container">
+			{{ post.meta('text') }}
+		</div>
+	</section>
+		{% include 'blog-categories/blog-categories.twig' with {'items': posts} %}
+		{% include 'blog-pagination/blog-pagination.twig' %}
+{% endblock %}

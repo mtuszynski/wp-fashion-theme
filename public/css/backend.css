@@ -1,0 +1,18 @@
+/* elements */
+.el-message {
+  top: 40px !important;
+}
+
+.el-popover {
+  background-color: #fff;
+}
+.el-popover .el-popconfirm {
+  padding: 16px;
+}
+.el-popover .el-popconfirm__main {
+  margin-top: unset;
+}
+
+.wp-admin .wrapper {
+  margin: 0 20px 0 0;
+}

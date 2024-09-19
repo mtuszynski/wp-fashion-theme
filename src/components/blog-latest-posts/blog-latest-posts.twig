@@ -1,0 +1,26 @@
+<section class="blog-latest-posts">
+    <div class="blog-latest-posts__container">
+        <h6 class="display-5 blog-latest-posts__heading">
+            {{ __('Może Cię również zainteresować:') }}
+        </h6>
+        <div class="blog-latest-posts__row">
+            {% for latestPosts in latest_posts_from_blog %}
+                <div class="blog-latest-posts__col">
+                    <div class="blog-categories__image">
+                        <a href="{{ latestPosts.link }}">
+                            <img src="{{ latestPosts.thumbnail.src|resize(438, 279) }}" alt=""/>
+                        </a>
+                        <div class="blog-categories__tags">
+                            {{ function('the_category', '') }}
+                        </div>
+                    </div>
+                    <a href="{{ latestPosts.link }}">
+                        <h6 class="display-6 blog-latest-posts__title">{{ latestPosts.title }}</h6>
+                    </a>
+                    <p class="blog-latest-posts__description">{{ latestPosts.preview.length(15) }}</p>
+                </div>
+            {% endfor %}
+            {% include 'blog-pagination/blog-pagination.twig' %}
+        </div>
+    </div>
+</section>

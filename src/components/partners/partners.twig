@@ -1,0 +1,17 @@
+<section data-aos="flip-down" id="partners" class="partners">
+  <div class="container-fluid">
+  <div class="partners__title">
+    {{ section.title }}
+  </div>
+  <div class="partners__logos">
+    {% set count = 250 %}
+    {% for item in section.partners %}
+    <div data-aos="fade-left"
+         data-aos-delay="{{ count }}" class="partners__logo">
+      <img src="{{ item.logo.url }}" alt="" class="partners__img" />
+    </div>
+      {% set count = count + 50 %}
+    {% endfor %}
+  </div>
+  </div>
+</section>

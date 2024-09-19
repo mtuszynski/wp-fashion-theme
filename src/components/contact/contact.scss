@@ -1,0 +1,134 @@
+.contact {
+  background-color: $background-color;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  overflow: hidden;
+  &__title {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+    color: $font-color;
+    padding-bottom: 5rem;
+    text-align: center;
+    @include breakpoint-down(sm){
+      font-size: 4.4rem;
+      line-height: 6rem;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 3rem;
+      line-height: 4.2rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__container-fluid {
+    display: flex;
+    @extend .container-fluid;
+    @include breakpoint-down(md){
+      flex-direction: column;
+    }
+  }
+  &__row {
+    flex: 0 0 50%;
+    @include breakpoint-down(md){
+      flex: 0 0 100%;
+    }
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5.8rem;
+  }
+  &__icon {
+    padding-right:2rem;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 4.2rem;
+    line-height: 5.2rem;
+    color:$font-color;
+    width: 90%;
+    padding-bottom: 10rem;
+    @include breakpoint-down(md){
+      padding-bottom: 5rem;
+    }
+    @include breakpoint-down(sm){
+      padding-bottom: 3rem;
+      font-size: 3.2rem;
+      line-height: 4.2rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 2.6rem;
+      line-height: 3.4rem;
+    }
+  }
+  &__mail-container {
+    @include breakpoint-down(md){
+      padding-bottom: 3rem;
+    }
+  }
+  &__mail {
+    color: $btn-color;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    @include breakpoint-down(xs){
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+  &__form {
+    @include breakpoint-down(md){
+      display: flex;
+      justify-content: center;
+      width:90%;
+    }
+  }
+}
+
+input[type="text"].form-control, input[type="email"].form-control, textarea.form-control {
+  padding: 14px 0 0 0;
+  font-size: 16px !important;
+  background: transparent;
+  z-index: 2;
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid $base-white;
+@include  breakpoint-down(sm){
+  width:100%;
+}}
+input[type="text"].form-control:focus, input[type="email"].form-control:focus,textarea.form-control:focus{
+  outline:0;
+}
+.wpcf7-form-control-wrap {
+  height: 100%;
+  display: block;
+  padding-top: 14px;
+}
+label[for=your-email], label[for=name], label[for=your-text] {
+  transform: translateY(-100%);
+  z-index: 1;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: $btn-color;
+  line-height: 4.2rem;
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;}
+.form-group.active > label {
+  transform: translateY(-150%);
+  color: $base-white;
+  font-size: 12px;
+  padding: 0 16px;
+}
+.form-submit {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 40%;
+  @include breakpoint-down(md){
+    width:100%!important;
+  }
+}

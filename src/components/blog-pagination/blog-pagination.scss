@@ -1,0 +1,108 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    height: 3.2rem;
+
+    li {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .page-numbers {
+      width: 3.2rem;
+      height: 3.2rem;
+      display: block;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 3.2rem;
+      color: $violet-dark;
+
+      &:focus {
+        color: $violet-dark !important;
+      }
+
+      &:hover {
+        background-color: #F2F1F8;
+        transition: 0.2s all;
+      }
+    }
+
+    .current {
+      background-color: $violet-dark;
+      color: white;
+
+      &:hover {
+        background-color: $violet-dark;
+        transition: none;
+      }
+    }
+  }
+
+  .prev {
+    margin-right: 1rem;
+
+    @media screen and (max-width: 600px) {
+      background-image: url('./public/images/svg/arrow-left-pagination.svg');
+    }
+  }
+
+  .next {
+    margin-left: 1rem;
+
+    @media screen and (max-width: 600px) {
+      background-image: url('./public/images/svg/arrow-right-pagination.svg');
+    }
+  }
+
+  .prev,
+  .next {
+    color: $violet-dark;
+    font-size: 1.4rem;
+    font-weight: 400;
+    align-self: center;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    padding: 0 1.5rem;
+    border-radius: 15px;
+
+    @media screen and (max-width: 600px) {
+      background-repeat: no-repeat;
+      background-size: 15px 30px;
+      text-indent: -999rem;
+    }
+
+    &:hover {
+      color: $new-grey;
+      background-color: #F2F1F8;
+      transition: 0.2s all;
+    }
+
+    &.invisible {
+      color: $new-grey;
+      padding: 0;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 94rem;
+    @extend .o-container;
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: center;
+    @include breakpoint-up(md) {
+      justify-content: left;
+    }
+  }
+}

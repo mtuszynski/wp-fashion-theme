@@ -1,0 +1,23 @@
+<section data-aos="fade-up" id="what-we-do" class="what-we-do">
+  <div class="what-we-do__container">
+    <div  class="what-we-do__title">
+      {{ section.title }}
+    </div>
+    <div data-aos="fade-left" class="what-we-do__text">
+      {{ section.text }}
+    </div>
+    <div class="what-we-do__icons">
+      {% set count = 150 %}
+      {% for item in section.icons %}
+      <div data-aos="fade-right"
+           data-aos-delay="{{ count }}" class="what-we-do__icon">
+        <img src="{{ item.icon.url }}" alt="" class="what-we-do__icon-img" />
+        <div class="what-we-do__icon-text">
+          {{ item.title }}
+        </div>
+      </div>
+        {% set count = count + 50 %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

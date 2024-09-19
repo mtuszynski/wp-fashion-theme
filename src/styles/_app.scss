@@ -1,0 +1,27 @@
+/* global */
+@import "uikit/src/scss/variables-theme";
+@import "uikit/src/scss/uikit";
+@import '_reset';
+@import '_fonts';
+@import '_variables';
+@import '_media';
+@import '_functions';
+@import '_extends';
+@import '_global';
+@import '_aos';
+
+/* components */
+@import 'components/Cookie/_cookie';
+
+/* elements */
+@import 'elements/elements';
+
+/* template parts */
+
+
+/* pages */
+@import 'pages/header/_header';
+@import 'pages/nav/_nav';
+@import 'pages/footer/_footer';
+
+//@import "../components/top/top";

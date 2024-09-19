@@ -1,0 +1,33 @@
+<ul class="nav-main {{class}}">
+  {% set items = menu.items %}
+
+  {% for item in items %}
+
+    <li class="nav-main__item {% if item.children %} nav-main__item--has-children {% endif %} {% if item.slug == post.post_name %} current {% endif %} " tabindex="0">
+
+      {% if item.link %}
+        <a href="{{ item.link }}" class="nav-main__link {{item.classes | join(' ')}} {% if item.children %} js-nav-main__link {% endif %}">
+      {% else %}
+        <a class="nav-main__link {{item.classes | join(' ')}} {% if item.children %} js-nav-main__link {% endif %}">
+      {% endif %}
+
+        <span>
+          {{item.title}}
+        </span>
+        {% if item.children %}
+              {{'chevron-down' | icon('') }}
+        {% endif %}
+
+      </a>
+
+      {% if item.children %}
+
+        {% include "nav-sub/nav-sub.twig" with {'items': item.children, 'class': '', 'backbtn': true} %}
+
+      {% endif %}
+
+    </li>
+
+  {% endfor %}
+
+</ul>

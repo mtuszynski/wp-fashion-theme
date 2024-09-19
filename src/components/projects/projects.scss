@@ -1,0 +1,182 @@
+.projects {
+  background-color: $background-color;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  overflow: hidden;
+  &__title {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+    color: $font-color;
+    padding-bottom: 5rem;
+    text-align: center;
+    @include breakpoint-down(sm){
+      font-size: 4.4rem;
+      line-height: 6rem;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 3rem;
+      line-height: 4.2rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    @extend .container-fluid;
+
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    @include breakpoint-down(md){
+      flex-direction: column;
+    }
+  }
+  &__img-container {
+    flex: 0 0 50%;
+    position: relative;
+    @include breakpoint-down(md){
+      align-self: center;
+      padding-bottom: 3rem;
+    }
+  }
+  &__img {
+    width:100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9rem;
+    flex: 0 0 40%;
+    @include breakpoint-down(sm){
+      padding-left: 2rem;
+    }
+  }
+  &__number {
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 4.7rem;
+    color: $font-color;
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+    color: $font-color;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #fff;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: $font-color;
+    padding:2.2rem 0;
+  }
+  &__menu {
+    a {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      color: $font-color;
+      &:not(:last-child) {
+        border-right: 1px solid $font-color;
+        padding-inline: 0.5rem;
+      }
+    }
+  }
+  &__link {
+    padding-top: 2.2rem;
+  }
+    &__btn{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: $font-color;
+      position: relative;
+      &:after {
+        content: "";
+        background-image: url("../../src/images/svg/section-arrow.svg");
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 2rem;
+        height: 1.6rem;
+        top: 0;
+        margin-left: 2rem;
+      }
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint-down(md){
+    transform: scale(50%);
+  }
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  &:after {
+    font-family: swiper-icons;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  &:after {
+    content: '';
+    background-image: url("../../src/images/svg/arrow-left-slider.svg");
+    width:3rem;
+    height:5rem;
+    background-repeat: no-repeat;
+  }
+  left: 0rem;
+  right: auto;
+  @include breakpoint-down(md){
+    left:-2rem;
+  }
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  &:after {
+    content: '';
+    background-image: url("../../src/images/svg/arrow-right-slider.svg");
+    width:3rem;
+    height:5rem;
+    background-repeat: no-repeat;
+  }
+  right: 0rem;
+  left: auto;
+  @include breakpoint-down(md){
+    right: -2rem;
+  }
+}
+
+.swiper-button-lock {
+  display: none;
+}
+.swiper-wrapper {
+  min-height: 200px!important;
+}
+.swiper-slide {
+  height:auto;
+}

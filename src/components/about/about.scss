@@ -1,0 +1,79 @@
+.about {
+  background: $background-color;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
+  overflow: hidden;
+  &__container {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(sm){
+      flex-direction: column;
+    }
+  }
+  &__textarea {
+    flex:0 0 40%;
+  }
+  &__video {
+    flex:0 0 60%;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+    color: $font-color;
+    padding-bottom: 5rem;
+    @include breakpoint-down(sm){
+      font-size: 4.4rem;
+      line-height: 6rem;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 3rem;
+      line-height: 4.2rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #ffffff;
+    width: 80%;
+    @include breakpoint-down(sm){
+      width:100%;
+    }
+    p {
+      padding-bottom: 3.2rem;
+    }
+  }
+  &__link {
+    @include breakpoint-down(sm){
+      margin-bottom: 3rem;
+    }
+  }
+  &__btn {
+    color: $btn-color;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        background-image: url("../../src/images/svg/section-arrow.svg");
+        position: absolute;
+      background-repeat: no-repeat;
+      width: 2rem;
+      height: 1.6rem;
+      top: 0;
+      margin-left: 2rem;
+    }
+  }
+  &__img {
+    @include breakpoint-down(sm){
+      width: 100%;
+    }
+  }
+}

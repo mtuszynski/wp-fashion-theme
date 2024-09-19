@@ -1,0 +1,123 @@
+.blog-categories {
+  &__container {
+    @extend .o-container;
+    padding-top: 5rem;
+    @include breakpoint-up(md) {
+      padding: 6rem 0 5rem 0;
+      margin-bottom: 0;
+      max-width: 99rem;
+    }
+  }
+
+  &__row {
+    @extend .o-grid;
+    margin: 0;
+  }
+
+  &__text {
+    margin: 12px 0 0;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #797685;
+    @include breakpoint-down(md) {
+      padding-bottom: 4rem;
+    }
+
+    .read-more {
+      display: none;
+    }
+  }
+
+  &__col {
+    @extend .o-grid__item;
+    @extend .md-6;
+    @include breakpoint-up(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__content {
+    text-align: left;
+  }
+
+  &__title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    position: relative;
+
+    a {
+      display: block;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transition: transform 2.2s cubic-bezier(0.14, 1.12, 0.67, 0.99) 0s;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  &__tags {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    ul {
+      display: flex;
+      gap: 5px;
+
+      li {
+        display: block;
+        padding: 8px 18px;
+        border-radius: 30px;
+        background-color: #F2F1F8;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: none;
+        color: #23194A;
+
+        &:focus,
+        &:hover,
+        &:active {
+          outline: none;
+          background-color: #23194A;
+          color: #fff;
+          transition: 0.2s all;
+        }
+
+        a {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.blog-categories__title {
+  font-weight: 300;
+  font-size: 24px;
+  font-family: 'Roboto', Arial sans-serif;
+  line-height: 32px;
+  color: $violet-dark;
+
+  &:hover {
+    outline: none;
+    color: rgba(35, 25, 74, 0.4);
+    transition: 0.2s all;
+  }
+}

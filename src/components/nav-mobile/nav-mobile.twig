@@ -1,0 +1,56 @@
+<ul class="nav-mobile {{ class }}">
+  <form method="get" class="header-blog__form" role="search" action="{{ site.url }}">
+    <input type="text" class="header-blog__input" placeholder="szukaj" name="s" />
+    <input type="hidden" name="post_type" value="post" />
+    <button class="header-blog__submit" type="submit" class="submit">
+      {{ 'search' | icon }}
+    </button>
+  </form>
+  <h4 class="nav-mobile__heading">
+    Kategorie
+  </h4>
+  <ul class="nav-mobile-categories">
+    {% for cat in categories %}
+      <li class="nav-mobile-categories__item">
+        <a class="nav-mobile-categories__link blog-category {% if term.slug == cat.slug %} nav-mobile-categories__link--active {% endif %}" href="{{ site.url }}/blog/{{ cat.slug }}">
+          {{ cat.name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <h4 class="nav-mobile__heading">
+    Strony
+  </h4>
+  <ul>
+    <li class="nav-mobile__item">
+      <a href="#" class="nav-mobile__link">
+        O blogu
+      </a>
+    </li>
+    <h4 class="nav-mobile__heading">
+      GOGOmedia
+    </h4>
+  </ul>
+  {% set items = menu.items %}
+  {% for item in items %}
+    <li class="nav-mobile__item {% if item.children %} nav-mobile__item--has-children {% endif %} {% if item.slug == post.post_name %} current {% endif %} " tabindex="0">
+      {% if item.link %}
+        <a
+        href="{{ item.link }}" class="nav-mobile__link {{ item.classes | join(' ') }} {% if item.children %} js-nav-mobile__link {% endif %}">
+          {% else %}
+          <a class="nav-mobile__link {{ item.classes | join(' ') }} {% if item.children %} js-nav-mobile__link {% endif %}">
+          {% endif %}
+          <span>
+            {{ item.title }}
+          </span>
+          {% if item.children %}
+            {{ 'arrow-down-violet' | icon('') }}
+          {% endif %}
+        </a>
+        {% if item.children %}
+          {% include "nav-sub/nav-sub.twig" with {'items': item.children, 'class': '', 'backbtn': true} %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  

@@ -1,0 +1,55 @@
+.cookie-bar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include tablet{
+    flex-direction: row;
+  }
+  .text{
+    width: 100%;
+    color: $base-black;
+    margin: 0 0 16px 0;
+    text-align: center;
+    @include tablet{
+      width: 75%;
+      margin: get-vw(0 80 0 0, $viewport-tablet);
+      text-align: left;
+    }
+    @include desktop{
+      margin: 0 80px 0 0;
+    }
+  }
+  .btn{
+    color: $base-black;
+    &:not(:last-child){
+      margin: 0 0 16px 0;
+      @include tablet{
+        margin: get-vw(0 24 0 0, $viewport-tablet);
+      }
+      @include desktop{
+        margin: 0 24px 0 0;
+      }
+    }
+    &:hover{
+      background-color: transparent;
+    }
+  }
+  .close{
+    padding: 0;
+    &:hover{
+      background-color: transparent;
+    }
+    i{
+      font-size: 1.4rem;
+      color: $base-black;
+      @include tablet{
+        font-size: get-vw(14, $viewport-tablet);
+      }
+      @include desktop{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

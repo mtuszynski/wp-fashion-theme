@@ -1,0 +1,77 @@
+.about-blog {
+  margin: 10rem 0 6rem;
+
+  &__content {
+    * {
+      @include breakpoint-up(lg) {
+        padding: 0 3rem;
+        max-width: 90rem;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      margin-bottom: 2.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    figure, img, a, span {
+      @include breakpoint-up(lg) {
+        padding: 0;
+        max-width: inherit;
+      }
+    }
+
+    h4 {
+      margin: 3rem auto 2.4rem;
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      margin: 3rem 0 1rem;
+    }
+
+    blockquote {
+      p {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        font-weight: 300;
+        border-left: 1px solid;
+        padding-left: 2rem;
+        font-style: italic;
+      }
+
+      cite {
+        display: flex;
+        align-items: center;
+        color: $grey;
+        font-style: normal;
+        font-size: 1.4rem;
+        padding: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 1.8rem;
+          height: 1.8rem;
+          background-image: url('../public/images/svg/sygnet.svg');
+          background-size: cover;
+          margin-right: 0.6rem;
+        }
+      }
+    }
+  }
+}

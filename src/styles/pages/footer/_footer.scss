@@ -1,0 +1,45 @@
+.footer {
+  padding-top:8rem;
+  color: $btn-color;
+  background-color: $background-color;
+&__content {
+  display: flex;
+  padding-bottom:6rem;
+  @include breakpoint-down(sm){
+    flex-direction: column;
+  }
+}
+  &__address  {
+    flex:0 0 50%;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-down(sm){
+      padding-bottom: 2rem;
+    }
+    a {
+      color: $btn-color;
+    }
+  }
+
+  &__menu {
+  flex: 0 0 50%;
+  }
+
+  &__copyright {
+
+  }
+}
+.footer-nav {
+    display:flex;
+  justify-content: space-between;
+
+  &__link {
+    color: $btn-color;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}

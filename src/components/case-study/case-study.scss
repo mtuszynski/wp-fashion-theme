@@ -1,0 +1,74 @@
+.case-study {
+  background-color: $background-color;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  overflow: hidden;
+  &__item {
+    display: flex;
+    align-items: center;
+    @include breakpoint-down(md){
+      flex-direction: column;
+    }
+  }
+  &__img {
+    flex:0 0 60%;
+    width:60%;
+    @include breakpoint-down(md){
+      align-self: center;
+      padding-bottom: 3rem;
+      width:100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9rem;
+    @include breakpoint-down(sm){
+      padding-left: 2rem;
+    }
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 7.2rem;
+    color: $font-color;
+    @include breakpoint-down(sm){
+      font-size: 4.4rem;
+      line-height: 6rem;
+    }
+    @include breakpoint-down(xs){
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #fff;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: $font-color;
+    padding:2.2rem 0;
+  }
+  &__details{
+    column-count: 3;
+    padding-top:7rem;
+    @include breakpoint-down(sm){
+      column-count: 2;
+    }
+    @include breakpoint-down(xs){
+      column-count: 1;
+    }
+  }
+  &__detail{
+    display: list-item;
+    margin-left: 1.3em;
+    list-style-type: disc;
+    color: $base-white;
+    margin-bottom: 2rem;
+  }
+}
